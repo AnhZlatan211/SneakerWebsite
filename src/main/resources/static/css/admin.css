@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: cursive;
+    background-color: #1a1a1a;
+}
+.container {
+    position: relative;
+}
+.container .nav {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap:90px;
+    align-items: center;
+    margin-top:35px;
+}
+.container .top a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.container .top i {
+    font-size: 30px;
+    padding-right: 5px;
+}
+.container .mid {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 55px;
+}
+.container .mid .element i {
+    padding-right: 10px;
+}
+.container .mid .element a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 25px;
+    border:none;
+    border-radius: 15px;
+    transition: 0.1s;
+}
+.container .mid .element a:hover {
+    background-color: #DFF2FF;
+    color: #252525;
+}
+.container .bottom a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    border:none;
+    border-radius: 50px;
+    transition: 0.1s;
+}
+.container .bottom a:hover {
+    background-color: #DFF2FF;
+    color: #252525;
+}
+.container .content {
+    width: 80%;
+    height: 700px;
+    position: absolute;
+    right:0;
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+.container .content .header {
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.container .content .header .right a {
+    color: white;
+    font-size: 22px;
+    padding: 3px 10px;
+    border-radius:50px;
+}
+.container .content .header .right a:last-child {
+    color: #ff5050;
+}
+.container .content .header .right a:last-child:hover {
+    color: black;
+    background-color: #DFF2FF;
+}
+.container .content .subheader {
+    width: 96%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.container .content .subheader .card {
+    width:23.5%;
+    padding:  5px 25px;
+    display:flex;
+    align-items:center;
+    gap: 20px;
+    border-radius: 18px;
+}
+.container .content .subheader .subcard {
+    color:white;
+}
+.container .content .subheader .card i {
+    padding: 18px 15px;
+    background-color:white;
+    color: green;
+    border-radius:50px;
+    font-size: 23px;
+}
+.container .content .mid {
+    width: 96%;
+    height: 100%;
+    background-color: #ecf7ff;
+    border-radius: 18px;
+    padding: 30px 35px 30px 45px;
+    margin-bottom: 25px;
+}
+.container .content .mid h2 {
+    margin: 0;
+}
+.container .content .mid .category {
+    margin: 10px;
+    display:flex;
+    justify-content:center;
+    gap:3%;
+}
+.container .content .mid .category .search {
+    background-color: white;
+    border-radius:50px;
+}
+.container .content .mid .category .search input,button {
+    border: none;
+    padding:12px 15px;
+    background-color: white;
+    border-radius:50px;
+}
+.container .content .mid .category .search input:focus {
+    outline: none;
+    border: none;
+}
+.container .content .mid .category .search button {
+    cursor:pointer;
+}
+.container .content .mid .category .search button:hover {
+    background-color:#f2f2f2;
+}
+.container .content .mid .category .sort {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.container .content .mid .category .sort select {
+    border: none;
+    padding:12px 25px 12px 15px;
+    background-color: white;
+    border-radius:50px;
+    appearance: none;
+}
+.container .content .mid .category .sort select:focus {
+    outline:none;
+}
+.container .content .mid .category .sort i {
+    position:absolute;
+    right:0;
+    font-size:10px;
+    padding-right: 10px;
+}
+.container .content .mid table {
+    width:100%;
+}
+.container .content .mid table th {
+    background-color: #04AA6D;
+    color: white;
+}
+.container .content .mid tr,td,th {
+    padding: 10px;
+    text-align: left;
+}
+.container .content .mid table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.container .content .mid table td:last-child, th:last-child {
+    text-align:center;
+}
+.container .content .mid table tr:hover {
+    background-color:#e6e6e6;
+}
+.container .content .mid table .delete {
+    color:#ff5050;
+    text-decoration: none;
+    font-size: 17px;
+    cursor:pointer;
+}
+
+
+
+
+/*Display: none */
+#logout {
+    background-color:rgba(0,0,0,0.6);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+    display: none;
+}
+#logout .container{
+    margin: auto;
+    margin-top: 200px;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    width:25%;
+    border-radius: 15px;
+    animation: zoom 0.5s;
+}
+@keyframes zoom {
+    from {transform:scale(0);}
+    to {transform: scale(1);}
+}
+#logout .container h3 {
+    margin:0px;
+    margin-bottom: 20px;
+}
+#logout .container .select a {
+    text-decoration: none;
+    padding: 8px 20px;
+    margin:10px;
+    border-radius: 50px;
+    background-color: #e6e6e6;
+    color: black;
+}
+#logout .container .select a:last-child {
+    background-color: #ff5050;
+    color: white;
+}
+#deleteUser {
+    background-color:rgba(0,0,0,0.6);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+    display: none;
+}
+#deleteUser .container{
+    margin: auto;
+    margin-top: 200px;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    width:25%;
+    border-radius: 15px;
+    animation: zoom 0.5s;
+}
+#deleteUser .container h3 {
+    margin:0px;
+    margin-bottom: 20px;
+}
+#deleteUser .container .select a {
+    text-decoration: none;
+    padding: 8px 20px;
+    margin:10px;
+    border-radius: 50px;
+    background-color: #e6e6e6;
+    color: black;
+}
+#deleteUser .container .select a:last-child {
+    background-color: #ff5050;
+    color: white;
+}
